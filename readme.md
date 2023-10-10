@@ -16,3 +16,7 @@ Installer les packages `npm install`
 # Lancement
 
 `npm run start` Une fenêtre s'ouvre vous invitant à lancer une partie
+
+## Tips
+
+Je vous conseille de lancer le jeu en plein écran pour une meilleure lisibilité
