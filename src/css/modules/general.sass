@@ -1,0 +1,74 @@
+body
+  position: relative
+  z-index: 10
+  margin: 0
+  font-family: $font-default
+  color: $color-black
+  text-decoration: none
+  margin-top: 5rem
+
+nav
+  position: fixed
+  z-index: 1000
+  top: 0
+  left: 0
+  right: 0
+  height: 5rem
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 0 16px
+  box-shadow: 0px 10px 25px 1px rgba($color-black, 0.05)
+
+  > div:first-child img
+    height: 32px
+
+  > div:nth-child(2)
+    margin-left: 2.5rem
+
+
+@for $i from 1 through 10
+  .mb-#{$i}
+    margin-bottom: #{$i}rem
+  .mt-#{$i}
+    margin-top: #{$i}rem
+  .ms-#{$i}
+    margin-left: #{$i}rem
+  .me-#{$i}
+    margin-right: #{$i}rem
+
+.badge
+  padding: 10px 26px
+  font-weight: 600
+  font-size: 12px
+
+  &-danger
+    background-color: rgba(red, 0.1)
+    color: rgba(red, 0.8)
+
+  &-success
+    background-color: rgba(green, 0.1)
+    color: rgba(green, 0.8)
+
+  &-warning
+    background-color: rgba(orange, 0.1)
+    color: rgba(orange, 0.8)
+
+//Helpers
+[data-helper]
+  position: relative
+  .help-message
+    display: none
+    position: absolute
+    padding: 8px 12px
+    bottom: calc(100% + 10px)
+    max-width: 150px
+    background-color: white
+    box-shadow: 0px 10px 25px 1px rgba($color-black, 0.1)
+    color: black
+    z-index: 1000
+    font-size: 12px
+    font-weight: bold
+
+  &:hover .help-message
+    display: block

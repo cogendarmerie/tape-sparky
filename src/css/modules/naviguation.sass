@@ -1,0 +1,35 @@
+.btn
+  display: inline-flex
+  flex-direction: row
+  align-items: center
+  padding: 12px 32px
+  text-decoration: none
+  cursor: pointer
+  font-family: $font-default
+  font-weight: bold
+  transition: all .25s ease
+  border: 2px solid $color-blue
+
+  &.btn-icon-left svg
+    margin-right: 4px
+
+  &.btn-icon-right svg
+    margin-left: 4px
+
+  svg
+    height: 20px
+    path
+      stroke: $color-white
+
+  &:hover
+    background-color: $color-black
+    border-color: $color-black
+    color: $color-white
+
+  &-primary
+    color: white
+    background-color: $color-blue
+
+  &-secondary
+    color: $color-blue
+    background-color: transparent

@@ -1,0 +1,59 @@
+#playpage
+  header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 12px 24px
+
+    > div:first-child
+      display: flex
+      flex-direction: column
+
+      > div:first-child h3
+        margin-bottom: 0
+
+      > div:nth-child(2)
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        & > *:not(:last-child)
+          margin-right: 16px
+
+        .label-info
+          display: flex
+          flex-direction: row
+          align-items: center
+
+          svg
+            margin-right: 8px
+
+
+#board
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(3, 1fr)
+  grid-column-gap: 0px
+  grid-row-gap: 0px
+  padding: 12px 24px
+
+  > div
+    position: relative
+    border: 1px solid rgba($color-black, 0.1)
+    height: 150px
+    overflow: hidden
+
+    .sparky
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      transition: all .25s ease
+
+    &[data-sparky="true"]
+       .sparky
+        bottom: -10px
+
+    &[data-sparky="false"]
+      .sparky
+        bottom: -100%

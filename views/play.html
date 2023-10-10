@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tape Sparky - SEVENTEEN INFORMATIQUE</title>
+  <link rel="icon" type="image/ico" href="../public/medias/logo/favicon.ico">
+  <link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body id="playpage">
+
+<nav>
+  <div>
+    <a href="https://seventeeninfo.fr" target="_blank">
+      <img src="../public/medias/logo/logo.svg" alt="SEVENTEEN INFORMATIQUE">
+    </a>
+  </div>
+  <div>
+    <h2>Tape Sparky</h2>
+  </div>
+</nav>
+<header>
+  <div>
+    <div>
+      <h3>Plateau de jeux</h3>
+    </div>
+    <div>
+      <p class="label-info" data-helper="Temps restant avant la fin de la partie">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.75 13.25C20.75 18.08 16.83 22 12 22C7.17 22 3.25 18.08 3.25 13.25C3.25 8.42 7.17 4.5 12 4.5C16.83 4.5 20.75 8.42 20.75 13.25Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 8V13" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 2H15" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span id="time">30</span> secondes
+      </p>
+      <p class="label-info" data-helper="Votre score">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 9C19 10.45 18.57 11.78 17.83 12.89C16.75 14.49 15.04 15.62 13.05 15.91C12.71 15.97 12.36 16 12 16C11.64 16 11.29 15.97 10.95 15.91C8.96 15.62 7.25 14.49 6.17 12.89C5.43 11.78 5 10.45 5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21.25 18.47L19.6 18.86C19.23 18.95 18.94 19.23 18.86 19.6L18.51 21.07C18.32 21.87 17.3 22.11 16.77 21.48L12 16L7.22996 21.49C6.69996 22.12 5.67996 21.88 5.48996 21.08L5.13996 19.61C5.04996 19.24 4.75996 18.95 4.39996 18.87L2.74996 18.48C1.98996 18.3 1.71996 17.35 2.26996 16.8L6.16996 12.9C7.24996 14.5 8.95996 15.63 10.95 15.92C11.29 15.98 11.64 16.01 12 16.01C12.36 16.01 12.71 15.98 13.05 15.92C15.04 15.63 16.75 14.5 17.83 12.9L21.73 16.8C22.28 17.34 22.01 18.29 21.25 18.47Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.58 5.98L13.17 7.15999C13.25 7.31999 13.46 7.48 13.65 7.51L14.72 7.68999C15.4 7.79999 15.56 8.3 15.07 8.79L14.24 9.61998C14.1 9.75998 14.02 10.03 14.07 10.23L14.31 11.26C14.5 12.07 14.07 12.39 13.35 11.96L12.35 11.37C12.17 11.26 11.87 11.26 11.69 11.37L10.69 11.96C9.96997 12.38 9.53997 12.07 9.72997 11.26L9.96997 10.23C10.01 10.04 9.93997 9.75998 9.79997 9.61998L8.96997 8.79C8.47997 8.3 8.63997 7.80999 9.31997 7.68999L10.39 7.51C10.57 7.48 10.78 7.31999 10.86 7.15999L11.45 5.98C11.74 5.34 12.26 5.34 12.58 5.98Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span id="point">0</span> points
+      </p>
+      <p class="label-info" data-helper="Interval de temps durant laquelle Sparky s'affiche">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.24 2H8.76004C5.00004 2 4.71004 5.38 6.74004 7.22L17.26 16.78C19.29 18.62 19 22 15.24 22H8.76004C5.00004 22 4.71004 18.62 6.74004 16.78L17.26 7.22C19.29 5.38 19 2 15.24 2Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span id="vitesse">1000</span> ms
+      </p>
+      <p class="label-info" data-helper="Votre niveau">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 15C15.7279 15 18.75 12.0899 18.75 8.5C18.75 4.91015 15.7279 2 12 2C8.27208 2 5.25 4.91015 5.25 8.5C5.25 12.0899 8.27208 15 12 15Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7.51999 13.52L7.51001 20.9C7.51001 21.8 8.14001 22.24 8.92001 21.87L11.6 20.6C11.82 20.49 12.19 20.49 12.41 20.6L15.1 21.87C15.87 22.23 16.51 21.8 16.51 20.9V13.34" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Niveau <span id="level">1</span>
+      </p>
+      <p class="badge badge-success" data-helper="Choisissez le niveau de difficultée" data-difficulty="1">Facile</p>
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-primary" type="button" id="start">
+      C'est partit !
+    </button>
+    <button class="btn btn-secondary" type="button" id="levelNext">
+      Niveau suivant
+    </button>
+  </div>
+</header>
+<section id="board">
+  <div data-index="0" data-sparky="false">
+    <img src="../public/medias/sparky/default.svg" class="sparky" alt="sparky">
+  </div>
+  <div data-index="1" data-sparky="false">
+    <img src="../public/medias/sparky/default.svg" class="sparky" alt="sparky">
+  </div>
+  <div data-index="2" data-sparky="false">
+    <img src="../public/medias/sparky/default.svg" class="sparky" alt="sparky">
+  </div>
+  <div data-index="3" data-sparky="false">
+    <img src="../public/medias/sparky/default.svg" class="sparky" alt="sparky">
+  </div>
+  <div data-index="4" data-sparky="false">
+    <img src="../public/medias/sparky/default.svg" class="sparky" alt="sparky">
+  </div>
+  <div data-index="5" data-sparky="false">
+    <img src="../public/medias/sparky/default.svg" class="sparky" alt="sparky">
+  </div>
+  <div data-index="6" data-sparky="false">
+    <img src="../public/medias/sparky/default.svg" class="sparky" alt="sparky">
+  </div>
+  <div data-index="7" data-sparky="false">
+    <img src="../public/medias/sparky/default.svg" class="sparky" alt="sparky">
+  </div>
+  <div data-index="8" data-sparky="false">
+    <img src="../public/medias/sparky/default.svg" class="sparky" alt="sparky">
+  </div>
+</section>
+
+<div class="modal" data-visible="false" id="modal-error">
+  <div>
+    <div>
+      <img src="../public/medias/sparky/error.svg" alt="Erreur">
+    </div>
+    <div>
+      <h2>Aïe 😓</h2>
+    </div>
+    <div>
+      <p class="message">Le temps est écoulée</p>
+    </div>
+    <div>
+      <button class="btn btn-primary" data-action="close">Compris !</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" data-visible="false" id="modal-success">
+  <div>
+    <div>
+      <img src="../public/medias/sparky/success.svg" alt="Success">
+    </div>
+    <div>
+      <h2>Bravo 🎉</h2>
+    </div>
+    <div>
+      <p class="message">Vous avez gagné</p>
+    </div>
+    <div>
+      <button class="btn btn-primary" data-action="close">Compris !</button>
+    </div>
+  </div>
+</div>
+
+<script src="../src/js/anime.min.js"></script>
+<script src="../src/js/script.js"></script>
+<script src="../src/js/modal.js"></script>
+<script src="../src/js/play.js"></script>
+
+</body>
+</html>

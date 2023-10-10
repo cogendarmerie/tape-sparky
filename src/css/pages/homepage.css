@@ -1,0 +1,10 @@
+#homepage header {
+  height: calc(100vh - (5rem + 48px));
+  padding: 16px 24px;
+}
+#homepage header p {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+/*# sourceMappingURL=homepage.css.map */

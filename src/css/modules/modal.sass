@@ -1,0 +1,22 @@
+.modal
+  position: fixed
+  inset: 0
+  background-color: rgba($color-black, 0.1)
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  &[data-visible="true"]
+    display: flex
+  &[data-visible="false"]
+    display: none
+
+  > div:first-child
+    background-color: white
+    padding: 24px
+    text-align: center
+    max-width: 250px
+
+    //Illustration
+    > div:first-child img
+      height: 120px
